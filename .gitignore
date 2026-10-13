@@ -1,0 +1,16 @@
+# Lokale credentials: nooit committen, ook geen varianten.
+.env
+.env.*
+!.env.example
+
+# Downloadnamen van browsers
+.env (*)
+
+# Lokale en gegenereerde bestanden
+.DS_Store
+Thumbs.db
+node_modules/
+logs/runtime/
+logs/test/
+tmp/
+output/
