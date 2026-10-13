@@ -10,7 +10,7 @@ Dit is speelgoed. Een `.env` is gewone leesbare tekst, geen beveiligde kluis.
 
 1. Open de map van deze repository.
 2. Dubbelklik op **index.html**. De app opent in je browser op Windows of macOS.
-3. Vul de twee velden in, bijvoorbeeld `nep-cursist` en `nep-pannenkoek`.
+3. Vul de twee velden in, bijvoorbeeld `nep-cursist` en `voorbeeld-123`.
 4. Klik op **.env opslaan**.
 5. Bewaar het bestand als **.env** in dezelfde map als `index.html`.
 
@@ -74,7 +74,7 @@ git check-ignore .env
 moet `.env` tonen: de negeerregel werkt. Controleer ook zelf dat het bestand
 bestaat; `git check-ignore` controleert een patroon, niet of je hebt opgeslagen.
 
-Verander nu het label `Nep accountnaam` in `index.html` naar `Mijn nep accountnaam`, sla het bestand op en
+Verander nu het label `Fictieve accountnaam` in `index.html` naar `Accountnaam (oefening)`, sla het bestand op en
 ververs je browser. Leg die wijziging vast:
 
 ```sh

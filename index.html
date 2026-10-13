@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nepcredentials</title>
+  <title>Oefencredentials | TeamNL</title>
   <link rel="stylesheet" href="src/style.css">
   <script src="src/credentials.js" defer></script>
   <script src="src/app.js" defer></script>
 </head>
 <body>
   <main>
-    <p>Alleen oefenen: gebruik geen echte accountnaam of echt wachtwoord.</p>
+    <p class="notice">Gebruik uitsluitend fictieve gegevens.</p>
     <form id="secret-form" autocomplete="off">
-      <label for="account">Nep accountnaam</label>
+      <label for="account">Fictieve accountnaam</label>
       <input id="account" name="exercise-account" type="text" value="nep-cursist" maxlength="80" spellcheck="false" required>
-      <label for="secret">Nep wachtwoord</label>
-      <input id="secret" name="exercise-secret" type="text" value="nep-pannenkoek" maxlength="80" spellcheck="false" required>
+      <label for="secret">Fictief wachtwoord</label>
+      <input id="secret" name="exercise-secret" type="text" value="voorbeeld-123" maxlength="80" spellcheck="false" required>
       <button type="submit">.env opslaan</button>
     </form>
     <p id="status" role="status" aria-live="polite"></p>

@@ -4,8 +4,9 @@ Bouw en onderhoud een mini-app in hello-worldstijl voor de agentic engineering
 dagen van TeamNL. Beginners leren een repository clonen, wijzigingen committen
 met een commit message en pushen, en ontdekken AGENTS.md, .gitignore, .env en README.md.
 
-De app toont een eenvoudige browserpagina met twee velden: Nep accountnaam en
-Nep wachtwoord, en één knop: .env opslaan. Geen verdere aankleding of checkbox.
+De app toont een verzorgde browserpagina met twee velden: Fictieve accountnaam en
+Fictief wachtwoord, en één knop: .env opslaan. Behoud de opmaak met een witte kaart
+en oranje accenten. Gebruik zakelijke taal, minimale tekst en geen checkbox.
 Beide ingevulde waarden worden als nepcredentials in een .env-bestand opgeslagen.
 Maak nadrukkelijk duidelijk dat echte wachtwoorden, API-keys of persoonsgegevens
 niet thuishoren in deze oefening. Toon één korte waarschuwing en vul de velden

@@ -16,7 +16,7 @@ form.addEventListener('submit', async (event) => {
     if (typeof window.showSaveFilePicker === 'function') {
       const handle = await window.showSaveFilePicker({ suggestedName: '.env' });
       if (handle.name !== '.env') {
-        status.textContent = 'Kies exact de bestandsnaam .env zodat de Git-oefening klopt. Er is niets geschreven; probeer opnieuw.';
+        status.textContent = 'Gebruik de bestandsnaam .env. Er is niets geschreven.';
         return;
       }
       const writable = await handle.createWritable();
@@ -32,11 +32,11 @@ form.addEventListener('submit', async (event) => {
       link.click();
       link.remove();
       setTimeout(() => URL.revokeObjectURL(url), 60000);
-      status.textContent = 'Download aangevraagd. Verplaats het bestand vanuit Downloads naar de map met index.html en geef het exact de naam .env (zonder .txt of volgnummer). Zie README.md als het bestand verborgen is.';
+      status.textContent = 'Download aangevraagd. Verplaats het bestand naar de repomap met de naam .env. Raadpleeg README.md voor instructies.';
     }
   } catch (error) {
     status.textContent = error.name === 'AbortError'
-      ? 'Opslaan geannuleerd. Je kunt het opnieuw proberen.'
+      ? 'Opslaan geannuleerd.'
       : 'Opslaan niet gelukt. ' + error.message;
   } finally {
     button.disabled = false;
