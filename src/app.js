@@ -10,8 +10,8 @@ form.addEventListener('submit', async (event) => {
   button.disabled = true;
   try {
     const contents = ExerciseCredentials.makeEnv(
-      document.getElementById('secret').value,
-      document.getElementById('fictional').checked
+      document.getElementById('account').value,
+      document.getElementById('secret').value
     );
     if (typeof window.showSaveFilePicker === 'function') {
       const handle = await window.showSaveFilePicker({ suggestedName: '.env' });
@@ -22,7 +22,7 @@ form.addEventListener('submit', async (event) => {
       const writable = await handle.createWritable();
       await writable.write(contents);
       await writable.close();
-      status.textContent = 'Opgeslagen als .env! Staat het naast index.html? Controleer nu met git status --short en git check-ignore .env dat Git het negeert.';
+      status.textContent = 'Opgeslagen als .env. Bewaar het bestand in de repomap naast index.html.';
     } else {
       const url = URL.createObjectURL(new Blob([contents], { type: 'text/plain;charset=utf-8' }));
       const link = document.createElement('a');

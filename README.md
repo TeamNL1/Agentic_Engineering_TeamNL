@@ -1,7 +1,7 @@
 # Hello world, oefengeheim!
 
-Een mini-app voor de **agentic engineering dagen van TeamNL**. Verzin een gekke
-boodschap, sla die als nepcredential op en ontdek waarom `.env` buiten Git hoort.
+Een mini-app voor de **agentic engineering dagen van TeamNL**. Vul een nepaccountnaam
+en nepwachtwoord in, sla ze op en ontdek waarom `.env` buiten Git hoort.
 
 **Gebruik nooit een echt wachtwoord, API-key, e-mailadres of andere echte gegevens.**
 Dit is speelgoed. Een `.env` is gewone leesbare tekst, geen beveiligde kluis.
@@ -10,15 +10,15 @@ Dit is speelgoed. Een `.env` is gewone leesbare tekst, geen beveiligde kluis.
 
 1. Open de map van deze repository.
 2. Dubbelklik op **index.html**. De app opent in je browser op Windows of macOS.
-3. Gebruik bijvoorbeeld `OEFEN-de-mascotte-eet-pannenkoeken`, of verzin zelf iets.
-4. Vink aan dat het uitsluitend oefengegevens zijn en klik op opslaan.
+3. Vul de twee velden in, bijvoorbeeld `nep-cursist` en `nep-pannenkoek`.
+4. Klik op **.env opslaan**.
 5. Bewaar het bestand als **.env** in dezelfde map als `index.html`.
 
 De app heeft geen Python, Java, Node.js, account of internetverbinding nodig.
 Alleen een bestaande browser. Chrome en Edge bieden waar ondersteund een
 opslaanvenster; Firefox en Safari gebruiken een download. Verplaats een download
 zelf naar de repository. Controleer de naam: `.env`, zonder `.txt` of `(1)`.
-Opnieuw opslaan op dezelfde plek vervangt de eerdere oefenboodschap; kies nooit
+Opnieuw opslaan op dezelfde plek vervangt de eerdere oefengegevens; kies nooit
 een `.env` van een ander project.
 
 **Bestand niet zichtbaar?** Op macOS toont `Cmd + Shift + .` verborgen bestanden
@@ -38,7 +38,8 @@ de opties **Verborgen items** en **Bestandsnaamextensies** aan.
 | `index.html` | Het venster van de app. |
 | `src/` | De vormgeving en JavaScriptcode. |
 
-De app schrijft `DEMO_USERNAME` en `DEMO_PASSWORD`. Ze werken nergens als login.
+De app schrijft de twee ingevulde waarden als `DEMO_USERNAME` en `DEMO_PASSWORD`.
+Gebruik alleen verzonnen waarden die nergens als login dienen.
 Andere apps kunnen hun instellingen uit een `.env` lezen; deze demo maakt alleen
 het bestand en leest geen opgeslagen credentials terug.
 
@@ -73,14 +74,14 @@ git check-ignore .env
 moet `.env` tonen: de negeerregel werkt. Controleer ook zelf dat het bestand
 bestaat; `git check-ignore` controleert een patroon, niet of je hebt opgeslagen.
 
-Verander nu de begroeting `Hello world.` in `index.html`, sla het bestand op en
+Verander nu het label `Nep accountnaam` in `index.html` naar `Mijn nep accountnaam`, sla het bestand op en
 ververs je browser. Leg die wijziging vast:
 
 ```sh
 git diff
 git add index.html
 git diff --cached
-git commit -m "Pas de begroeting van mijn oefenapp aan"
+git commit -m "Pas het veldlabel van mijn oefenapp aan"
 git push -u origin HEAD
 ```
 
@@ -97,8 +98,8 @@ alleen je gewijzigde bronbestand toe. Deel je `.env` ook niet via screenshots.
 ## Controle voor de begeleider
 
 - Open `index.html` rechtstreeks, ook zonder internet; controleer de mobiele breedte.
-- Sla een oefenboodschap op en controleer de twee DEMO-velden in het bestand.
-- Probeer ongeldige invoer en opslaan zonder vinkje; beide moeten worden geweigerd.
+- Wijzig beide velden, sla op en controleer de twee DEMO-waarden in het bestand.
+- Probeer lege invoer en aanhalingstekens; beide moeten worden geweigerd.
 - Annuleer het opslaanvenster en probeer opnieuw.
 - Controleer Chrome/Edge met opslaanvenster en Safari/Firefox met download,
   op de Windows- en macOS-machines die je voor de cursus gebruikt.

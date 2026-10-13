@@ -4,15 +4,16 @@ Lees eerst AGENTS.md en README.md. De opdracht is een kleine, lokale browserapp
 voor beginners, zonder installatie. HTML, CSS en klassieke JavaScriptbestanden
 werken rechtstreeks via file://. Geen server, account of externe data nodig.
 
-De eerste fase is gebouwd: verzonnen boodschap invoeren, expliciet bevestigen,
-dotenvtekst maken en opslaan of downloaden. De tweede fase is de cursuscontrole:
+De eerste fase is gebouwd en vereenvoudigd: twee velden voor nepaccountnaam en
+nepwachtwoord, één knop, dotenvtekst maken en opslaan of downloaden. Geen checkbox
+of verplicht voorvoegsel. De tweede fase is de cursuscontrole:
 op Windows en macOS de echte browserdialogen doorlopen en de Git-oefening testen
 met de accounts van deelnemers. Publiceren gebeurt op verzoek van de gebruiker.
 
 Klaar betekent: fictieve invoer duidelijk gemarkeerd, geldige dotenvtekst,
 annulering en fouten afgehandeld, .env genegeerd, en begrijpelijke lesinstructies.
 De automatische checks staan in tests/; de handmatige checklist in README.md.
-Een voorvoegsel kan niet bewijzen dat een gebruiker fictieve gegevens invoert.
+Validatie kan niet bewijzen dat een gebruiker fictieve gegevens invoert.
 
 Houd de structuur compact voor deze hello-worldopdracht: index.html als ingang,
 broncode in src/, checks in tests/, faseverslagen in logs/agent-sessions/.

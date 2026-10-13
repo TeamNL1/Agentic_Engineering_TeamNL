@@ -3,37 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TeamNL · Mijn eerste geheim</title>
+  <title>Nepcredentials</title>
   <link rel="stylesheet" href="src/style.css">
   <script src="src/credentials.js" defer></script>
   <script src="src/app.js" defer></script>
 </head>
 <body>
   <main>
-    <p class="eyebrow">TEAMNL / AGENTIC ENGINEERING DAGEN</p>
-    <h1>Hello world.<br>Dag, oefengeheim!</h1>
-    <p class="intro">Je eerste app bewaart een nepcredential in een bestand dat buiten Git blijft.</p>
-    <aside><strong>Dit is speelgoed. Gebruik alleen verzonnen gegevens.</strong>
-      <p>Geen echt wachtwoord, e-mailadres, API-key of andere echte gegevens. Je oefengeheim wordt leesbaar opgeslagen; deze app is geen wachtwoordkluis.</p>
-    </aside>
-    <form id="secret-form">
-      <label for="secret">Verzin een geheime oefenboodschap</label>
-      <p id="secret-help">Begin met OEFEN-, bijvoorbeeld OEFEN-de-mascotte-eet-pannenkoeken. Gebruik letters, cijfers, spaties en streepjes (maximaal 80 tekens).</p>
-      <input id="secret" name="exercise-message" type="text" value="OEFEN-de-mascotte-eet-pannenkoeken" maxlength="80" aria-describedby="secret-help" autocomplete="off" spellcheck="false" required>
-      <label class="confirmation"><input id="fictional" type="checkbox" required> Ik heb uitsluitend een verzonnen oefenboodschap ingevuld.</label>
-      <button type="submit">Bewaar mijn nepcredential als .env</button>
+    <p>Alleen oefenen: gebruik geen echte accountnaam of echt wachtwoord.</p>
+    <form id="secret-form" autocomplete="off">
+      <label for="account">Nep accountnaam</label>
+      <input id="account" name="exercise-account" type="text" value="nep-cursist" maxlength="80" spellcheck="false" required>
+      <label for="secret">Nep wachtwoord</label>
+      <input id="secret" name="exercise-secret" type="text" value="nep-pannenkoek" maxlength="80" spellcheck="false" required>
+      <button type="submit">.env opslaan</button>
     </form>
     <p id="status" role="status" aria-live="polite"></p>
-    <section>
-      <h2>Wat gebeurt er?</h2>
-      <ol>
-        <li>Je maakt een bestand met <code>DEMO_USERNAME</code> en <code>DEMO_PASSWORD</code>.</li>
-        <li>Bewaar het als <code>.env</code> in dezelfde map als <code>index.html</code>.</li>
-        <li><code>.gitignore</code> vertelt Git dat dit bestand lokaal moet blijven.</li>
-      </ol>
-      <p>Je invoer blijft in deze browser totdat je het bestand opslaat. De app verstuurt niets en gebruikt geen externe diensten.</p>
-    </section>
-    <footer>Open README.md voor de stappen: clone → wijzig → commit → push.</footer>
   </main>
 </body>
 </html>

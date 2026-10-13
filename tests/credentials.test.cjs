@@ -2,23 +2,21 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const { makeEnv } = require('../src/credentials.js');
 
-test('maakt twee herkenbare nepcredentials met afsluitende newline', () => {
-  const result = makeEnv('OEFEN-de-mascotte-eet-pannenkoeken', true);
-  assert.match(result, /DEMO_USERNAME="nep-cursist"\n/);
-  assert.match(result, /DEMO_PASSWORD="OEFEN-de-mascotte-eet-pannenkoeken"\n$/);
+test('slaat beide ingevulde velden op als nepcredentials', () => {
+  const result = makeEnv('nep-mascotte', 'nep-pannenkoek');
+  assert.match(result, /DEMO_USERNAME="nep-mascotte"\n/);
+  assert.match(result, /DEMO_PASSWORD="nep-pannenkoek"\n$/);
   assert.equal(result.split('\n').filter(line => line && !line.startsWith('#')).length, 2);
 });
 
-test('weigert zonder expliciete bevestiging', () => {
-  assert.throws(() => makeEnv('OEFEN-hallo', false));
-});
-
-test('weigert lege invoer, ontbrekend voorvoegsel en dotenv-injectie', () => {
-  for (const input of ['', 'OEFEN-', 'wachtwoord', 'OEFEN-x\nADMIN=true', 'OEFEN-x\rADMIN=true', 'OEFEN-"test"', 'OEFEN-${TOKEN}', 'OEFEN-naam@example.com', 'OEFEN-' + 'x'.repeat(75), null]) {
-    assert.throws(() => makeEnv(input, true), String(input));
+test('weigert lege invoer en dotenv-injectie in beide velden', () => {
+  for (const input of ['', '   ', 'x\nADMIN=true', 'x\rADMIN=true', '"test"', '${TOKEN}', 'naam@example.com', 'x'.repeat(81), null]) {
+    assert.throws(() => makeEnv(input, 'nep-pannenkoek'), String(input));
+    assert.throws(() => makeEnv('nep-cursist', input), String(input));
   }
 });
 
-test('accepteert maximaal 80 tekens', () => {
-  assert.doesNotThrow(() => makeEnv('OEFEN-' + 'x'.repeat(74), true));
+test('accepteert maximaal 80 tekens per veld zonder verplicht voorvoegsel', () => {
+  assert.doesNotThrow(() => makeEnv('x'.repeat(80), 'y'.repeat(80)));
+  assert.doesNotThrow(() => makeEnv('cursist_1', 'een verzonnen boodschap'));
 });

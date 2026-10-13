@@ -6,7 +6,7 @@ const { makeEnv } = require('../src/credentials.js');
 
 function browser(picker) {
   const elements = {
-    secret: { value: 'OEFEN-test' }, fictional: { checked: true },
+    account: { value: 'nep-cursist' }, secret: { value: 'nep-pannenkoek' },
     status: { textContent: '' }, button: { disabled: false }
   };
   let submit;
@@ -31,7 +31,7 @@ test('opslaanvenster schrijft en sluit .env', async () => {
     write: async content => { written = content; }, close: async () => { closed = true; }
   }) }));
   await app.submit();
-  assert.equal(written, makeEnv('OEFEN-test', true));
+  assert.equal(written, makeEnv('nep-cursist', 'nep-pannenkoek'));
   assert.equal(closed, true);
   assert.match(app.elements.status.textContent, /Opgeslagen/);
   assert.equal(app.elements.button.disabled, false);
