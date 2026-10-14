@@ -1,5 +1,16 @@
 # Opdracht voor coding agents
 
+## Cursusmateriaal en intake-skill
+
+Naast de oefenapp bevat deze repository de zelfstandige intake-skill in
+`.agents/skills/teamnl-ae-intake-skill/`. Houd de skill en ondersteunende
+referenties daar, los van applicatiecode in `src/`. De skill begeleidt uitsluitend
+een intake tot een plan voor een nieuwe repository. Pas de onderstaande
+browserapp-eisen niet toe op projecten van cursisten: hun eisen volgen uit
+de eigen casus. Het aanroepen van de intake is geen opdracht om de app te bouwen.
+
+## Oefenapp
+
 Bouw en onderhoud een mini-app in hello-worldstijl voor de agentic engineering
 dagen van TeamNL. Beginners leren een repository clonen, wijzigingen committen
 met een commit message en pushen, en ontdekken AGENTS.md, .gitignore, .env en README.md.

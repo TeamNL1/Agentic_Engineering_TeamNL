@@ -95,6 +95,59 @@ in met je eigen waarden. Je noreply-adres vind je bij je GitHub-e-mailinstelling
 Git gevolgd worden. Gebruik nooit `git add -f .env`. Voeg voor deze oefening
 alleen je gewijzigde bronbestand toe. Deel je `.env` ook niet via screenshots.
 
+## Intake voor een eigen project
+
+De **TeamNL-AE-Intake-Skill** staat in een aparte submap, los van de appcode:
+
+```text
+.agents/skills/teamnl-ae-intake-skill/
+|-- SKILL.md
+|-- TeamNL_AE_Intake_SKILL.md
+|-- agents/openai.yaml
+`-- references/
+```
+
+Open deze repository als project in Codex en start met:
+
+```text
+$teamnl-ae-intake-skill
+```
+
+Je kiest eerst een **korte** of **uitgebreide** intake. Kort stelt maximaal één
+brede vraag per thema, met alleen bij een heel onduidelijk eerste antwoord één
+verduidelijkingsvraag. Uitgebreid stelt maximaal drie vragen per thema. Dat zijn
+bovengrenzen; reeds beantwoorde onderwerpen worden overgeslagen. Per beurt volgt
+één samenhangende vraag die ruimte geeft voor een uitgebreider antwoord.
+
+Het gesprek gaat over het plan achter de casus: doel, aanpak, betrokkenen, eerste
+bruikbare stap en projectinrichting. De acht vaste thema's zijn casus,
+gebruikers, bronnen, gegevensbescherming, hergebruik, eerste versie, logging en
+repository-inrichting. Technische specificaties worden later door de agent
+uitgezocht, tenzij de cursist die zelf wil bespreken. Waar relevant legt de
+intake vast welke documentatie of voorbeelden beschikbaar zijn en wat de agent
+mag bekijken. Bij bereikte vraaglimieten worden onzekerheden uitzoekpunten in
+het plan; de basisintake wordt niet verlengd. De repository-indeling komt als
+laatste; zonder voorkeur gebruikt de skill de standaardstructuur.
+Het repositoryvoorstel bevat altijd `logs/` met passende afspraken over inhoud,
+toegang, beheer en wat buiten Git blijft.
+Het resultaat is één `PLAN_VAN_AANPAK.md` op de afgesproken locatie, plus een
+compacte samenvatting in het agentgesprek. Daarin staan de aanpak en de
+belangrijkste ontwerpkeuzes met hun reden, in begrijpelijke taal. Daarna kun je
+kiezen voor tien specifieke inhoudelijke vervolgvragen om het plan aan te
+scherpen, één per beurt. Deze optionele ronde geldt voor beide intakevarianten
+en start alleen als je daarvoor kiest. De antwoorden worden verwerkt in hetzelfde
+plan en een vernieuwde samenvatting; eerder stoppen met de vragen kan ook.
+Je kunt ook losse vragen stellen of wijzigingen doorgeven; het plan wordt dan aangepast.
+Tijdens deze intake worden geen applicatie of repository aangemaakt.
+
+Bekijk de [skillinstructies](.agents/skills/teamnl-ae-intake-skill/TeamNL_AE_Intake_SKILL.md).
+`SKILL.md` is het startbestand dat naar deze instructies verwijst.
+Codex ondersteunt deze repositorylocatie en het aanroepen via `$`; als een
+nieuwe skill niet verschijnt, herstart Codex. Zie de
+[officiële skill-documentatie](https://learn.chatgpt.com/docs/build-skills).
+Bij een andere coding agent kun je de instructies als startdocument gebruiken;
+automatische herkenning hangt van die agent af.
+
 ## Controle voor de begeleider
 
 - Open `index.html` rechtstreeks, ook zonder internet; controleer de mobiele breedte.
