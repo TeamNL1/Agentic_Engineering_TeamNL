@@ -121,6 +121,11 @@ Open deze repository als project en start de intake:
 
 Mistral Vibe laadt projectskills alleen als je de map als vertrouwd markeert.
 
+Echte keuzes, zoals kort of uitgebreid, verschijnen als keuzeknoppen als de
+agent dat ondersteunt. Claude Code doet dat altijd. Codex alleen in Plan-modus,
+tenzij `default_mode_request_user_input = true` onder `[features]` in je
+Codex-`config.toml` staat. Zonder knoppen stelt de agent dezelfde vraag in tekst.
+
 Je kiest eerst een **korte** of **uitgebreide** intake. Kort stelt maximaal één
 brede vraag per thema, met alleen bij een heel onduidelijk eerste antwoord één
 verduidelijkingsvraag. Uitgebreid stelt maximaal drie vragen per thema. Dat zijn
@@ -146,6 +151,8 @@ scherpen, één per beurt. Deze optionele ronde geldt voor beide intakevarianten
 en start alleen als je daarvoor kiest. De antwoorden worden verwerkt in hetzelfde
 plan en een vernieuwde samenvatting; eerder stoppen met de vragen kan ook.
 Je kunt ook losse vragen stellen of wijzigingen doorgeven; het plan wordt dan aangepast.
+Bestudeer het plan daarna zelf, vraag bij voorkeur een second opinion en verwijs
+je coding agents ernaar, bijvoorbeeld via `AGENTS.md` of `CLAUDE.md`.
 Tijdens deze intake worden geen applicatie of repository aangemaakt.
 
 Bekijk de [skillinstructies](.agents/skills/teamnl-ae-intake-skill/TeamNL_AE_Intake_SKILL.md).

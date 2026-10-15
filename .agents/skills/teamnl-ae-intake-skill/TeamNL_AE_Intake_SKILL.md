@@ -24,6 +24,22 @@ intake met meer aandacht voor keuzes en projectinrichting?**
 Stel in die beurt nog geen casusvraag. Sla de keuzevraag over als de variant
 al gekozen is. Gebruik eerder gegeven casusinformatie; begin niet opnieuw.
 
+## Keuzevragen met knoppen
+
+Stel echte keuzevragen met de keuzetool van de agent, als die beschikbaar is:
+`AskUserQuestion` in Claude Code, `request_user_input` in Codex. Geef
+twee tot vier korte opties met een uitleg van één zin; de cursist kan altijd
+zelf iets anders antwoorden. Gebruik dit alleen voor:
+
+- de intakevariant: Kort of Uitgebreid;
+- de repository-indeling in thema 8: standaardindeling of eigen voorkeur;
+- de optionele verdiepingsronde: wel of geen tien vervolgvragen.
+
+Stel alle andere intakevragen als open tekst, zodat de cursist uitgebreid kan
+antwoorden. Verzin geen antwoordopties voor open vragen. Is er geen keuzetool,
+of meldt de tool dat die niet beschikbaar is, stel dezelfde vraag dan gewoon in
+tekst. Een vraag via de keuzetool telt even zwaar mee als een vraag in tekst.
+
 ## Vraaglimieten en gespreksafspraken
 
 De basisintake heeft precies de acht thema's hieronder. Houd intern per thema bij:
@@ -254,8 +270,9 @@ naar het document als dat is opgeslagen.
 
 Nodig zonder verplichte akkoordvraag uit tot vragen en aanpassingen, bijvoorbeeld:
 'Je kunt een keuze laten toelichten of aangeven wat je in dit plan wilt wijzigen.'
-Sluit de eerste samenvatting daarna af met de keuze voor de optionele
-verdiepingsronde hieronder. Start die alleen als de cursist daarvoor kiest.
+Geef daarna de afsluitende herinnering hieronder. Sluit de eerste samenvatting
+af met de keuze voor de optionele verdiepingsronde. Start die alleen als de
+cursist daarvoor kiest.
 Als de cursist losse feedback geeft, pas het plan en de samenvatting samen aan.
 Hergebruik de intake; start die niet opnieuw en presenteer een voorstel niet
 stilzwijgend als akkoord. Start niet met bouwen.
@@ -264,6 +281,23 @@ Schrijf als bestand alleen `PLAN_VAN_AANPAK.md` op de afgesproken locatie. Is di
 vraag er alleen naar als thema 8 nog vraagruimte heeft; bij geen bestemming,
 geen vraagruimte of expliciete afronding geef je de Markdown in de chat. Schrijf een nieuwe casus
 niet automatisch in de cursusrepo en overschrijf geen ander projectplan.
+
+### Afsluitende herinnering
+
+Herinner de cursist bij de eerste oplevering, buiten de woordgrens van de
+samenvatting, kort aan drie stappen voordat er gebouwd wordt:
+
+1. **Zelf bestuderen:** lees het hele plan kritisch. Het is een voorstel van de
+   agent op basis van het gesprek; de cursist blijft verantwoordelijk.
+2. **Second opinion:** laat het plan bij voorkeur beoordelen door een collega,
+   begeleider of andere AI-agent, en verwerk de opmerkingen.
+3. **Agents naar het plan verwijzen:** zorg dat coding agents het plan
+   gebruiken, bijvoorbeeld door in `AGENTS.md` of `CLAUDE.md` van de nieuwe
+   repository naar `PLAN_VAN_AANPAK.md` te verwijzen. In `CLAUDE.md` kan dat met
+   de regel `@AGENTS.md` of `@PLAN_VAN_AANPAK.md`.
+
+Pas deze bestanden niet zelf aan tijdens de intake. Herhaal de herinnering na
+de verdiepingsronde in één zin.
 
 ### Optionele verdieping na de samenvatting
 
@@ -290,8 +324,8 @@ plan aan te scherpen? Ik stel ze één voor één.**
   gevoelige gegevens en de grens tussen plannen en bouwen blijven gelden.
 - Verwerk na tien antwoorden, of wanneer de cursist de vragen eerder wil
   afronden, de ontvangen inhoud in hetzelfde plan en geef een vernieuwde compacte
-  samenvatting. Leg gewijzigde keuzes en hun redenen uit; onzekerheden blijven
-  open punten. Een tussentijdse vraag of correctie van de cursist mag direct
+  samenvatting met de herinnering in één zin. Leg gewijzigde keuzes en hun
+  redenen uit; onzekerheden blijven open punten. Een tussentijdse vraag of correctie van de cursist mag direct
   worden verwerkt zonder de teller voor vragen van de agent te veranderen.
   Bij een verzoek om alle werkzaamheden te stoppen, stop je ook het bijwerken.
 - Bied na deze ronde niet automatisch opnieuw tien vragen aan en begin niet
