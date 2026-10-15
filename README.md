@@ -107,11 +107,19 @@ De **TeamNL-AE-Intake-Skill** staat in een aparte submap, los van de appcode:
 `-- references/
 ```
 
-Open deze repository als project in Codex en start met:
+Codex en Mistral Vibe vinden de skill direct in `.agents/skills/`. Claude Code
+zoekt in `.claude/skills/`; daar staat alleen een korte verwijzing naar dezelfde
+instructies. Pas de skill dus altijd aan in `.agents/skills/`.
 
-```text
-$teamnl-ae-intake-skill
-```
+Open deze repository als project en start de intake:
+
+| Agent        | Starten                    |
+|--------------|----------------------------|
+| Codex        | `$teamnl-ae-intake-skill`  |
+| Claude Code  | `/teamnl-ae-intake-skill`  |
+| Mistral Vibe | `/teamnl-ae-intake-skill`  |
+
+Mistral Vibe laadt projectskills alleen als je de map als vertrouwd markeert.
 
 Je kiest eerst een **korte** of **uitgebreide** intake. Kort stelt maximaal één
 brede vraag per thema, met alleen bij een heel onduidelijk eerste antwoord één
