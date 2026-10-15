@@ -14,7 +14,7 @@ Je code moet kunnen draaien zonder echte data. Anders kan je buddy niets en je a
 
 ## Wanneer wel, wanneer (nog) niet
 - **Altijd** als je project met data werkt.
-- `data/example/`: synthetische, geanonimiseerde of openbare data. Klein (KB's, geen GB's).
+- `data/example/`: synthetische, geanonimiseerde of openbare data. Altijd klein (**< 1 MB**), en ga ervan uit dat het **op straat ligt**: niets gevoeligs, liefst synthetisch.
 - `data/private/`: echte data. Staat in [`.gitignore`](gitignore.md). Of nog beter: staat helemaal buiten je repo en wordt via `DATA_DIR` in [`.env`](env.md) aangewezen.
 
 ## Zo begin je
