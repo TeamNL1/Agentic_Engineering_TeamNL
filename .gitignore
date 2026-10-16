@@ -14,3 +14,7 @@ logs/runtime/
 logs/test/
 tmp/
 output/
+
+# Cursusafspraak: echte/lokale data blijven buiten Git
+data/private/
+media/private/

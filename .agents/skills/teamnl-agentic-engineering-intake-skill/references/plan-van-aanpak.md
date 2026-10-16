@@ -1,4 +1,4 @@
-# Inhoud van PLAN_VAN_AANPAK.md
+# Inhoud van plan-van-aanpak.md
 
 Gebruik onderstaande indeling voor het uiteindelijke plan. Vul haar met de
 antwoorden uit de intake, niet met algemene standaardtekst. Pas de lengte aan
@@ -46,7 +46,10 @@ in hetzelfde plan en een vernieuwde samenvatting; houd die inhoudelijk gelijk.
 6. **Gegevensbescherming** — categorieën gevoelige data, opslag van brondata en
    resultaten, toegangsrechten, wat in Git/agentcontext mag, testdata, secrets,
    sandboxgrens, bewaartermijn en open maatregelen. Leg per relevant risico vast
-   welke maatregel nodig is en wie een open beslissing afhandelt.
+   welke maatregel nodig is en wie een open beslissing afhandelt. Voeg het
+   AGENTS.md-voorstel uit [data-access.md](data-access.md) toe: data-eigenaar,
+   toestemming, leesrechten, lokale verwerking, toegestane output en deny-regels.
+   Configuratievoorbeelden zijn voorstellen, geen reeds ingestelde beveiliging.
 7. **Bestaande code** — wat mogelijk herbruikbaar is, locatie/verwijzing,
    beschikbaarheid, toestemming en benodigde beoordeling. Zonder
    bestaande code: vermeld dat versie 1 nieuw wordt gebouwd.
@@ -56,14 +59,14 @@ in hetzelfde plan en een vernieuwde samenvatting; houd die inhoudelijk gelijk.
    acceptatiecontroles als voorstel als ze niet besproken zijn; maak daar geen
    aanvullend technisch interview van.
 9. **Latere versies** — alleen relevante ideeën die bewust buiten versie 1 vallen.
-10. **Repositoryvoorstel** — concrete boomstructuur, functie van onderdelen,
+10. **Repositoryvoorstel** — naam volgens `doelgroep-doel-specifiek`, concrete boomstructuur, functie van onderdelen,
     modules/dataflow waar zinvol, documentatie/overdraagbaarheid, Git-werkwijze,
     ignore-afspraken en eventuele CI/deployment. Markeer gebruikte standaardkeuzes.
     Neem `logs/` ook bij een eigen indeling expliciet in de boom op.
 11. **Logging en beheer** — welke gebeurtenissen en fouten worden vastgelegd,
     het benodigde detailniveau, toegang, bewaartermijn/verwijdering of beheerder.
     Beschrijf de benodigde delen van `logs/runtime/`, `logs/test/` en
-    `logs/agent-sessions/`, met een `logs/README.md` voor de afspraken. Ruwe logs
+    `docs/handoffs/`, met een `logs/README.md` voor de afspraken. Ruwe logs
     blijven buiten Git; geen secrets, persoonsgegevens of volledige brondata.
     Onderscheid de wens van de cursist, voorgestelde defaults en open keuzes.
 12. **Startvoorwaarden en uitvoering** — bekende randvoorwaarden en toegang,

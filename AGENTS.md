@@ -3,9 +3,9 @@
 ## Cursusmateriaal en intake-skill
 
 Naast de oefenapp bevat deze repository de zelfstandige intake-skill in
-`.agents/skills/teamnl-ae-intake-skill/`. Houd de skill en ondersteunende
+`.agents/skills/teamnl-agentic-engineering-intake-skill/`. Houd de skill en ondersteunende
 referenties daar, los van applicatiecode in `src/`. Codex en Mistral Vibe lezen
-die map direct; `.claude/skills/teamnl-ae-intake-skill/SKILL.md` is alleen een
+die map direct; `.claude/skills/teamnl-agentic-engineering-intake-skill/SKILL.md` is alleen een
 verwijzing voor Claude Code met dezelfde naam en beschrijving. De skill begeleidt uitsluitend
 een intake tot een plan voor een nieuwe repository. Pas de onderstaande
 browserapp-eisen niet toe op projecten van cursisten: hun eisen volgen uit
@@ -13,8 +13,8 @@ de eigen casus. Het aanroepen van de intake is geen opdracht om de app te bouwen
 
 ## Oefenapp
 
-Bouw en onderhoud een mini-app in hello-worldstijl voor de agentic engineering
-dagen van TeamNL. Beginners leren een repository clonen, wijzigingen committen
+Bouw en onderhoud een mini-app in hello-worldstijl voor de TeamNL
+Agentic Engineering-dagen. Beginners leren een repository clonen, wijzigingen committen
 met een commit message en pushen, en ontdekken AGENTS.md, .gitignore, .env en README.md.
 
 De app toont een verzorgde browserpagina met twee velden: Fictieve accountnaam en
@@ -46,6 +46,21 @@ garanderen dat gegevens fictief zijn.
 Lees eerst README.md en deze opdracht. Houd wijzigingen klein en gericht.
 Voer, als Node.js beschikbaar is, `node --test tests/*.test.cjs` uit; Node.js is
 alleen voor onderhoud nodig. Controleer de browser handmatig volgens de README.
-Noteer na een fase wijzigingen, checks en beperkingen in logs/agent-sessions/.
+Noteer na een fase wijzigingen, checks en beperkingen in docs/handoffs/.
 Gebruik finn-agentic-coding-manager en caveman als die skills beschikbaar zijn;
 volg anders de bovenstaande regels rechtstreeks.
+
+## Cursusafspraken voor namen en data
+
+- Eigen bestanden en mappen: kleine letters met streepjes; Python-modules met underscores.
+- Behoud vaste herkenningsnamen: AGENTS.md, CLAUDE.md, README.md en SKILL.md.
+- Reponamen: doelgroep-doel-specifiek; specifiek is optioneel.
+- Voorbeelddata: data/example/, fictief of aantoonbaar deelbaar, elk bestand < 1 MB.
+- Echte/lokale data: data/private/, buiten Git en alleen binnen goedgekeurde toegang.
+- Geschoonde ontwikkelverslagen: docs/handoffs/; ruwe logs: logs/runtime/ en logs/test/.
+- Deze cursusafspraken gaan voor op afwijkende defaults in de manager-skill.
+
+## Branchindeling
+
+Main bevat de oefenrepo en intake-skill. Het naslagwerk staat uitsluitend op
+de branch naslagwerk, in de map naslagwerk/. Voeg die map niet toe aan main.

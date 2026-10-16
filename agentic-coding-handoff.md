@@ -1,4 +1,4 @@
-# Overdracht — TeamNL oefengeheim
+# Overdracht — teamnl-agentic-engineering
 
 Lees eerst AGENTS.md en README.md. De opdracht is een kleine, lokale browserapp
 voor beginners, zonder installatie. HTML, CSS en klassieke JavaScriptbestanden
@@ -16,7 +16,7 @@ De automatische checks staan in tests/; de handmatige checklist in README.md.
 Validatie kan niet bewijzen dat een gebruiker fictieve gegevens invoert.
 
 Houd de structuur compact voor deze hello-worldopdracht: index.html als ingang,
-broncode in src/, checks in tests/, faseverslagen in logs/agent-sessions/.
+broncode in src/, checks in tests/, faseverslagen in docs/handoffs/.
 Geen databronnen, media, authenticatie, telemetrie of runtime-logs toevoegen.
 Gebruik de projectskills als beschikbaar, inspecteer eerst de repository,
 wijzig uitsluitend de actieve opdracht en rapporteer wijzigingen, checks,

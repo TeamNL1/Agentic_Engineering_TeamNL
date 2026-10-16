@@ -1,6 +1,6 @@
-# Hello world, oefengeheim!
+# teamnl-agentic-engineering
 
-Een mini-app voor de **agentic engineering dagen van TeamNL**. Vul een nepaccountnaam
+Een mini-app voor de **TeamNL Agentic Engineering-dagen**. Vul een nepaccountnaam
 en nepwachtwoord in, sla ze op en ontdek waarom `.env` buiten Git hoort.
 
 **Gebruik nooit een echt wachtwoord, API-key, e-mailadres of andere echte gegevens.**
@@ -54,8 +54,8 @@ app ook openen zonder Git, maar daarmee oefen je geen clone, commit of push.
 Open een terminal (PowerShell op Windows, Terminal op macOS):
 
 ```sh
-git clone https://github.com/TeamNL1/Agentic_Engineering_TeamNL.git
-cd Agentic_Engineering_TeamNL
+git clone https://github.com/TeamNLSportScienceCentre/teamnl-agentic-engineering.git
+cd teamnl-agentic-engineering
 git switch -c oefening/jouw-unieke-naam
 ```
 
@@ -97,12 +97,12 @@ alleen je gewijzigde bronbestand toe. Deel je `.env` ook niet via screenshots.
 
 ## Intake voor een eigen project
 
-De **TeamNL-AE-Intake-Skill** staat in een aparte submap, los van de appcode:
+De **teamnl-agentic-engineering-intake-skill** staat in een aparte submap, los van de appcode:
 
 ```text
-.agents/skills/teamnl-ae-intake-skill/
+.agents/skills/teamnl-agentic-engineering-intake-skill/
 |-- SKILL.md
-|-- TeamNL_AE_Intake_SKILL.md
+|-- teamnl-agentic-engineering-intake-skill.md
 |-- agents/openai.yaml
 `-- references/
 ```
@@ -115,16 +115,15 @@ Open deze repository als project en start de intake:
 
 | Agent        | Starten                    |
 |--------------|----------------------------|
-| Codex        | `$teamnl-ae-intake-skill`  |
-| Claude Code  | `/teamnl-ae-intake-skill`  |
-| Mistral Vibe | `/teamnl-ae-intake-skill`  |
+| Codex        | `$teamnl-agentic-engineering-intake-skill`  |
+| Claude Code  | `/teamnl-agentic-engineering-intake-skill`  |
+| Mistral Vibe | `/teamnl-agentic-engineering-intake-skill`  |
 
 Mistral Vibe laadt projectskills alleen als je de map als vertrouwd markeert.
 
 Echte keuzes, zoals kort of uitgebreid, verschijnen als keuzeknoppen als de
-agent dat ondersteunt. Claude Code doet dat altijd. Codex alleen in Plan-modus,
-tenzij `default_mode_request_user_input = true` onder `[features]` in je
-Codex-`config.toml` staat. Zonder knoppen stelt de agent dezelfde vraag in tekst.
+agent dat ondersteunt. De beschikbaarheid hangt af van de agent, versie en modus. Zonder keuzetool
+stelt de agent dezelfde vraag in tekst.
 
 Je kiest eerst een **korte** of **uitgebreide** intake. Kort stelt maximaal één
 brede vraag per thema, met alleen bij een heel onduidelijk eerste antwoord één
@@ -143,7 +142,7 @@ het plan; de basisintake wordt niet verlengd. De repository-indeling komt als
 laatste; zonder voorkeur gebruikt de skill de standaardstructuur.
 Het repositoryvoorstel bevat altijd `logs/` met passende afspraken over inhoud,
 toegang, beheer en wat buiten Git blijft.
-Het resultaat is één `PLAN_VAN_AANPAK.md` op de afgesproken locatie, plus een
+Het resultaat is één `plan-van-aanpak.md` op de afgesproken locatie, plus een
 compacte samenvatting in het agentgesprek. Daarin staan de aanpak en de
 belangrijkste ontwerpkeuzes met hun reden, in begrijpelijke taal. Daarna kun je
 kiezen voor tien specifieke inhoudelijke vervolgvragen om het plan aan te
@@ -155,13 +154,32 @@ Bestudeer het plan daarna zelf, vraag bij voorkeur een second opinion en verwijs
 je coding agents ernaar, bijvoorbeeld via `AGENTS.md` of `CLAUDE.md`.
 Tijdens deze intake worden geen applicatie of repository aangemaakt.
 
-Bekijk de [skillinstructies](.agents/skills/teamnl-ae-intake-skill/TeamNL_AE_Intake_SKILL.md).
+Bekijk de [skillinstructies](.agents/skills/teamnl-agentic-engineering-intake-skill/teamnl-agentic-engineering-intake-skill.md).
 `SKILL.md` is het startbestand dat naar deze instructies verwijst.
 Codex ondersteunt deze repositorylocatie en het aanroepen via `$`; als een
 nieuwe skill niet verschijnt, herstart Codex. Zie de
 [officiële skill-documentatie](https://learn.chatgpt.com/docs/build-skills).
 Bij een andere coding agent kun je de instructies als startdocument gebruiken;
 automatische herkenning hangt van die agent af.
+
+## Gezamenlijke cursusafspraken
+
+Eigen documenten krijgen kleine letters met streepjes: `plan-van-aanpak.md`
+en `agentic-coding-handoff.md`. Vaste namen zoals `AGENTS.md`, `CLAUDE.md`,
+`README.md` en `SKILL.md` blijven behouden. Reponamen volgen
+`doelgroep-doel-specifiek`, bijvoorbeeld `wsv-data-mining-koffiepauze`.
+
+- `data/example/`: fictieve of aantoonbaar deelbare voorbeelden, elk < 1 MB.
+- `data/private/`: echte/lokale data, buiten Git; toegang apart afspreken.
+- `docs/handoffs/`: geschoonde sessieverslagen.
+- `logs/runtime/` en `logs/test/`: ruwe uitvoerlogs, buiten Git.
+
+De intake legt de data-eigenaar, toestemming, lees- en verwerkingsrechten vast
+en levert in het plan een blok voor het toekomstige `AGENTS.md` plus voorstellen
+voor technische toegangsregels. De intake wijzigt die instellingen nog niet.
+
+Zie het [naslagwerk op de aparte branch](https://github.com/TeamNLSportScienceCentre/teamnl-agentic-engineering/tree/naslagwerk/naslagwerk) en de
+[start- en controlehandleiding](docs/agent-startcontrole.md).
 
 ## Controle voor de begeleider
 

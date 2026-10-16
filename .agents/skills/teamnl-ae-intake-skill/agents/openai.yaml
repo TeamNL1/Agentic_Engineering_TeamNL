@@ -1,4 +1,0 @@
-interface:
-  display_name: "TeamNL-AE-Intake-Skill"
-  short_description: "Stapsgewijze intake voor een nieuw projectplan"
-  default_prompt: "Gebruik $teamnl-ae-intake-skill om mij vraag voor vraag te begeleiden naar een plan van aanpak voor een nieuwe repository."
